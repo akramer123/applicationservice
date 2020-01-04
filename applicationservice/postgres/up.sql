@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS applications;
+CREATE TABLE applications (
+  id VARCHAR(32) PRIMARY KEY,
+  name TEXT NOT NULL,
+  age TEXT NOT NULL,
+  job TEXT NOT NULL
+);

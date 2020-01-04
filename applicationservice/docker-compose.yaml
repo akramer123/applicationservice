@@ -1,0 +1,17 @@
+version: "3.6"
+
+services:
+  postgres:
+    build: "./postgres"
+    restart: "always"
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_DB: "applications"
+      POSTGRES_USER: "applications"
+      POSTGRES_PASSWORD: "123456"
+    networks:
+        - mynet
+networks:
+  mynet:
+    driver: bridge
